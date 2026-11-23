@@ -1,0 +1,412 @@
+{
+  "teams": [
+    {
+      "name": "G1 杜娟 / 岩石 / 上限 15",
+      "cap": 15,
+      "mons": [
+        {
+          "species": "ROGGENROLA",
+          "level": 13,
+          "moves": [
+            "STEALTH_ROCK",
+            "MUD_SLAP",
+            "TACKLE",
+            "HARDEN"
+          ]
+        },
+        {
+          "species": "NACLI",
+          "level": 14,
+          "moves": [
+            "ROCK_THROW",
+            "MUD_SHOT",
+            "SMACK_DOWN",
+            "HARDEN"
+          ]
+        },
+        {
+          "species": "BINACLE",
+          "level": 14,
+          "moves": [
+            "WATER_GUN",
+            "FURY_CUTTER",
+            "MUD_SLAP",
+            "WITHDRAW"
+          ]
+        },
+        {
+          "species": "NOSEPASS",
+          "level": 15,
+          "moves": [
+            "ROCK_THROW",
+            "THUNDER_WAVE",
+            "BLOCK",
+            "HARDEN"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G2 藤树 / 格斗 / 上限 19",
+      "cap": 19,
+      "mons": [
+        {
+          "species": "PANCHAM",
+          "level": 17,
+          "moves": [
+            "ARM_THRUST",
+            "LOW_SWEEP",
+            "CIRCLE_THROW",
+            "TAUNT"
+          ]
+        },
+        {
+          "species": "CROAGUNK",
+          "level": 18,
+          "moves": [
+            "LOW_KICK",
+            "MUD_SLAP",
+            "ASTONISH",
+            "TAUNT"
+          ]
+        },
+        {
+          "species": "MEDITITE",
+          "level": 19,
+          "moves": [
+            "FORCE_PALM",
+            "CONFUSION",
+            "DETECT",
+            "ENDURE"
+          ]
+        },
+        {
+          "species": "HARIYAMA",
+          "level": 19,
+          "moves": [
+            "ARM_THRUST",
+            "FORCE_PALM",
+            "FAKE_OUT",
+            "KNOCK_OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G3 铁旋 / 电 / 上限 24",
+      "cap": 24,
+      "mons": [
+        {
+          "species": "JOLTIK",
+          "level": 23,
+          "moves": [
+            "THUNDER_WAVE",
+            "ELECTRO_BALL",
+            "BUG_BITE",
+            "ELECTROWEB"
+          ]
+        },
+        {
+          "species": "HELIOPTILE",
+          "level": 24,
+          "moves": [
+            "BULLDOZE",
+            "MUD_SLAP",
+            "VOLT_SWITCH",
+            "THUNDER_SHOCK"
+          ]
+        },
+        {
+          "species": "EMOLGA",
+          "level": 24,
+          "moves": [
+            "NUZZLE",
+            "QUICK_ATTACK",
+            "THUNDER_SHOCK",
+            "CHARGE"
+          ]
+        },
+        {
+          "species": "MANECTRIC",
+          "level": 24,
+          "moves": [
+            "THUNDER_FANG",
+            "SHOCK_WAVE",
+            "THUNDER_WAVE",
+            "BITE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G4 亚莎 / 火·晴天 / 上限 29",
+      "cap": 29,
+      "mons": [
+        {
+          "species": "NUMEL",
+          "level": 26,
+          "moves": [
+            "LAVA_PLUME",
+            "EARTH_POWER",
+            "BULLDOZE",
+            "AMNESIA"
+          ]
+        },
+        {
+          "species": "LITWICK",
+          "level": 26,
+          "moves": [
+            "WILL_O_WISP",
+            "HEX",
+            "FIRE_SPIN",
+            "CONFUSE_RAY"
+          ]
+        },
+        {
+          "species": "TORKOAL",
+          "level": 28,
+          "moves": [
+            "LAVA_PLUME",
+            "PROTECT",
+            "RAPID_SPIN",
+            "CLEAR_SMOG"
+          ]
+        },
+        {
+          "species": "PETILIL",
+          "level": 28,
+          "moves": [
+            "GIGA_DRAIN",
+            "SLEEP_POWDER",
+            "LEECH_SEED",
+            "MAGICAL_LEAF"
+          ]
+        },
+        {
+          "species": "DARMANITAN_STANDARD",
+          "level": 29,
+          "moves": [
+            "FIRE_PUNCH",
+            "FIRE_FANG",
+            "HEADBUTT",
+            "WORK_UP"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G5 千里 / 普通 / 上限 31",
+      "cap": 31,
+      "mons": [
+        {
+          "species": "VIGOROTH",
+          "level": 29,
+          "moves": [
+            "THROAT_CHOP",
+            "SLASH",
+            "AMNESIA",
+            "SLACK_OFF"
+          ]
+        },
+        {
+          "species": "KECLEON",
+          "level": 29,
+          "moves": [
+            "SHADOW_SNEAK",
+            "PSYBEAM",
+            "ANCIENT_POWER",
+            "SLASH"
+          ]
+        },
+        {
+          "species": "SPINDA",
+          "level": 30,
+          "moves": [
+            "BODY_SLAM",
+            "TEETER_DANCE",
+            "PSYBEAM",
+            "SUCKER_PUNCH"
+          ]
+        },
+        {
+          "species": "SLAKING",
+          "level": 31,
+          "moves": [
+            "THROAT_CHOP",
+            "SLASH",
+            "SUCKER_PUNCH",
+            "SLACK_OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G6 娜琪 / 飞行 / 上限 33",
+      "cap": 33,
+      "mons": [
+        {
+          "species": "GLIGAR",
+          "level": 30,
+          "moves": [
+            "ACROBATICS",
+            "KNOCK_OFF",
+            "U_TURN",
+            "POISON_TAIL"
+          ]
+        },
+        {
+          "species": "SKARMORY",
+          "level": 31,
+          "moves": [
+            "STEEL_WING",
+            "WING_ATTACK",
+            "SLASH",
+            "AGILITY"
+          ]
+        },
+        {
+          "species": "HAWLUCHA",
+          "level": 32,
+          "moves": [
+            "BRICK_BREAK",
+            "BOUNCE",
+            "AERIAL_ACE",
+            "ENCORE"
+          ]
+        },
+        {
+          "species": "SWELLOW",
+          "level": 33,
+          "moves": [
+            "BRAVE_BIRD",
+            "AERIAL_ACE",
+            "AGILITY",
+            "QUICK_GUARD"
+          ]
+        },
+        {
+          "species": "ALTARIA",
+          "level": 33,
+          "moves": [
+            "DRAGON_PULSE",
+            "DRAGON_BREATH",
+            "SING",
+            "COTTON_GUARD"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G7 小枫小南 / 超能·双打 / 上限 43",
+      "cap": 43,
+      "mons": [
+        {
+          "species": "CLAYDOL",
+          "level": 41,
+          "moves": [
+            "EARTH_POWER",
+            "EXTRASENSORY",
+            "RAPID_SPIN",
+            "COSMIC_POWER"
+          ]
+        },
+        {
+          "species": "GARDEVOIR",
+          "level": 42,
+          "moves": [
+            "PSYCHIC",
+            "CALM_MIND",
+            "DAZZLING_GLEAM",
+            "HYPNOSIS"
+          ]
+        },
+        {
+          "species": "REUNICLUS",
+          "level": 42,
+          "moves": [
+            "PSYCHIC",
+            "PSYSHOCK",
+            "RECOVER",
+            "LIGHT_SCREEN"
+          ]
+        },
+        {
+          "species": "SOLROCK",
+          "level": 43,
+          "moves": [
+            "PSYCHIC",
+            "ROCK_SLIDE",
+            "FLARE_BLITZ",
+            "ZEN_HEADBUTT"
+          ]
+        },
+        {
+          "species": "LUNATONE",
+          "level": 43,
+          "moves": [
+            "PSYCHIC",
+            "ROCK_SLIDE",
+            "HYPNOSIS",
+            "MOONLIGHT"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G8 亚当 / 水·雨天 / 上限 46",
+      "cap": 46,
+      "mons": [
+        {
+          "species": "PELIPPER",
+          "level": 43,
+          "moves": [
+            "AIR_SLASH",
+            "WATER_PULSE",
+            "TAILWIND",
+            "PROTECT"
+          ]
+        },
+        {
+          "species": "WHISCASH",
+          "level": 44,
+          "moves": [
+            "EARTHQUAKE",
+            "MUDDY_WATER",
+            "AQUA_TAIL",
+            "AMNESIA"
+          ]
+        },
+        {
+          "species": "LUDICOLO",
+          "level": 44,
+          "moves": [
+            "HYDRO_PUMP",
+            "ENERGY_BALL",
+            "GIGA_DRAIN",
+            "FAKE_OUT"
+          ]
+        },
+        {
+          "species": "TENTACRUEL",
+          "level": 46,
+          "moves": [
+            "SURF",
+            "POISON_JAB",
+            "ACID_ARMOR",
+            "HEX"
+          ]
+        },
+        {
+          "species": "KINGDRA",
+          "level": 46,
+          "moves": [
+            "DRAGON_PULSE",
+            "WATER_PULSE",
+            "AGILITY",
+            "BUBBLE_BEAM"
+          ]
+        }
+      ]
+    }
+  ]
+}

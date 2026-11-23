@@ -1,0 +1,244 @@
+{
+  "teams": [
+    {
+      "name": "E4-1 花月 / 恶 / 49",
+      "cap": 49,
+      "mons": [
+        {
+          "species": "ABSOL",
+          "level": 47,
+          "moves": [
+            "SUCKER_PUNCH",
+            "NIGHT_SLASH",
+            "SWORDS_DANCE",
+            "KNOCK_OFF"
+          ]
+        },
+        {
+          "species": "HONCHKROW",
+          "level": 47,
+          "moves": [
+            "FOUL_PLAY",
+            "NIGHT_SLASH",
+            "NASTY_PLOT",
+            "WING_ATTACK"
+          ]
+        },
+        {
+          "species": "CACTURNE",
+          "level": 48,
+          "moves": [
+            "SUCKER_PUNCH",
+            "ENERGY_BALL",
+            "SPIKES",
+            "LEECH_SEED"
+          ]
+        },
+        {
+          "species": "DRAPION",
+          "level": 49,
+          "moves": [
+            "CROSS_POISON",
+            "X_SCISSOR",
+            "NIGHT_SLASH",
+            "TOXIC_SPIKES"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E4-2 芙蓉 / 幽灵 / 51",
+      "cap": 51,
+      "mons": [
+        {
+          "species": "BANETTE",
+          "level": 50,
+          "moves": [
+            "SHADOW_BALL",
+            "SUCKER_PUNCH",
+            "WILL_O_WISP",
+            "TRICK"
+          ]
+        },
+        {
+          "species": "DUSCLOPS",
+          "level": 50,
+          "moves": [
+            "SHADOW_BALL",
+            "WILL_O_WISP",
+            "FUTURE_SIGHT",
+            "ICE_PUNCH"
+          ]
+        },
+        {
+          "species": "MISMAGIUS",
+          "level": 51,
+          "moves": [
+            "SHADOW_BALL",
+            "POWER_GEM",
+            "MYSTICAL_FIRE",
+            "PERISH_SONG"
+          ]
+        },
+        {
+          "species": "SPIRITOMB",
+          "level": 51,
+          "moves": [
+            "DARK_PULSE",
+            "SHADOW_BALL",
+            "NASTY_PLOT",
+            "SUCKER_PUNCH"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E4-3 波妮 / 冰·雪天 / 53",
+      "cap": 53,
+      "mons": [
+        {
+          "species": "FROSLASS",
+          "level": 52,
+          "moves": [
+            "FROST_BREATH",
+            "CRUNCH",
+            "WILL_O_WISP",
+            "DRAINING_KISS"
+          ]
+        },
+        {
+          "species": "ABOMASNOW",
+          "level": 52,
+          "moves": [
+            "BLIZZARD",
+            "WOOD_HAMMER",
+            "ICE_SHARD",
+            "INGRAIN"
+          ]
+        },
+        {
+          "species": "GLALIE",
+          "level": 53,
+          "moves": [
+            "FREEZE_DRY",
+            "ICE_FANG",
+            "PROTECT",
+            "FROST_BREATH"
+          ]
+        },
+        {
+          "species": "WALREIN",
+          "level": 53,
+          "moves": [
+            "SURF",
+            "BODY_SLAM",
+            "ENCORE",
+            "REST"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E4-4 源治 / 龙 / 55",
+      "cap": 55,
+      "mons": [
+        {
+          "species": "FLYGON",
+          "level": 54,
+          "moves": [
+            "EARTHQUAKE",
+            "DRAGON_CLAW",
+            "DRAGON_DANCE",
+            "BUG_BUZZ"
+          ]
+        },
+        {
+          "species": "ALTARIA",
+          "level": 54,
+          "moves": [
+            "DRAGON_PULSE",
+            "MOONBLAST",
+            "COTTON_GUARD",
+            "PERISH_SONG"
+          ]
+        },
+        {
+          "species": "DRUDDIGON",
+          "level": 55,
+          "moves": [
+            "OUTRAGE",
+            "SUPERPOWER",
+            "IRON_HEAD",
+            "CRUNCH"
+          ]
+        },
+        {
+          "species": "SALAMENCE",
+          "level": 55,
+          "moves": [
+            "DRAGON_CLAW",
+            "FLAMETHROWER",
+            "CRUNCH",
+            "ZEN_HEADBUTT"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CH 米可利 / 水·雨天 / 58",
+      "cap": 58,
+      "mons": [
+        {
+          "species": "PELIPPER",
+          "level": 55,
+          "moves": [
+            "HURRICANE",
+            "ROOST",
+            "TAILWIND",
+            "PROTECT"
+          ]
+        },
+        {
+          "species": "LUDICOLO",
+          "level": 56,
+          "moves": [
+            "HYDRO_PUMP",
+            "ENERGY_BALL",
+            "FAKE_OUT",
+            "ZEN_HEADBUTT"
+          ]
+        },
+        {
+          "species": "KINGDRA",
+          "level": 57,
+          "moves": [
+            "HYDRO_PUMP",
+            "DRAGON_PULSE",
+            "AGILITY",
+            "WATER_PULSE"
+          ]
+        },
+        {
+          "species": "MILOTIC",
+          "level": 57,
+          "moves": [
+            "SURF",
+            "RECOVER",
+            "COIL",
+            "DRAGON_TAIL"
+          ]
+        },
+        {
+          "species": "GYARADOS",
+          "level": 58,
+          "moves": [
+            "WATERFALL",
+            "DRAGON_DANCE",
+            "CRUNCH",
+            "ICE_FANG"
+          ]
+        }
+      ]
+    }
+  ]
+}
