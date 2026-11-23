@@ -1101,8 +1101,16 @@ enum NationalDexOrder
     F(MARSHTOMP) \
     F(SWAMPERT) \
     F(POOCHYENA) \
+    F(STARLY) \
+    F(KRICKETOT) \
+    F(LILLIPUP) \
+    F(PIDOVE) \
+    F(PETILIL) \
+    F(SCATTERBUG) \
     F(MIGHTYENA) \
     F(ZIGZAGOON) \
+    F(BUNNELBY) \
+    F(SKWOVET) \
     F(LINOONE) \
     HOENN_DEX_IF(P_GALARIAN_FORMS, F(OBSTAGOON)) \
     F(WURMPLE) \
@@ -1120,6 +1128,7 @@ enum NationalDexOrder
     F(SWELLOW) \
     F(WINGULL) \
     F(PELIPPER) \
+    F(CHERUBI) \
     F(RALTS) \
     F(KIRLIA) \
     F(GARDEVOIR) \
@@ -1129,6 +1138,9 @@ enum NationalDexOrder
     F(SHROOMISH) \
     F(BRELOOM) \
     F(SLAKOTH) \
+    F(CUTIEFLY) \
+    F(BLIPBUG) \
+    F(TAROUNTULA) \
     F(VIGOROTH) \
     F(SLAKING) \
     F(ABRA) \
@@ -1139,12 +1151,33 @@ enum NationalDexOrder
     F(SHEDINJA) \
     F(WHISMUR) \
     F(LOUDRED) \
+    F(HELIOPTILE) \
+    F(SANDYGAST) \
     F(EXPLOUD) \
     F(MAKUHITA) \
     F(HARIYAMA) \
     F(GOLDEEN) \
     F(SEAKING) \
     F(MAGIKARP) \
+    F(BUIZEL) \
+    F(SHELLOS) \
+    F(FINNEON) \
+    F(BLITZLE) \
+    F(SEWADDLE) \
+    F(VENIPEDE) \
+    F(COTTONEE) \
+    F(BASCULIN) \
+    F(DEERLING) \
+    F(FRILLISH) \
+    F(BOUFFALANT) \
+    F(SKIDDO) \
+    F(SKRELP) \
+    F(CLAUNCHER) \
+    F(WISHIWASHI) \
+    F(MUDBRAY) \
+    F(CHEWTLE) \
+    F(ARROKUDA) \
+    F(WIGLETT) \
     F(GYARADOS) \
     F(AZURILL) \
     F(MARILL) \
@@ -1155,9 +1188,20 @@ enum NationalDexOrder
     F(NOSEPASS) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(PROBOPASS)) \
     F(SKITTY) \
+    F(GRUBBIN) \
     F(DELCATTY) \
     F(ZUBAT) \
+    F(BINACLE) \
+    F(ROCKRUFF) \
     F(GOLBAT) \
+    F(BRONZOR) \
+    F(ROGGENROLA) \
+    F(WOOBAT) \
+    F(DRILBUR) \
+    F(CARBINK) \
+    F(ROLYCOLY) \
+    F(SILICOBRA) \
+    F(NACLI) \
     F(CROBAT) \
     F(TENTACOOL) \
     F(TENTACRUEL) \
@@ -1195,13 +1239,23 @@ enum NationalDexOrder
     F(SWALOT) \
     F(CARVANHA) \
     F(SHARPEDO) \
+    F(WOOLOO) \
     F(WAILMER) \
+    F(LECHONK) \
+    F(PAWMI) \
+    F(FIDOUGH) \
     F(WAILORD) \
     F(NUMEL) \
     F(CAMERUPT) \
     F(SLUGMA) \
     F(MAGCARGO) \
     F(TORKOAL) \
+    F(MAGBY) \
+    F(DARUMAKA) \
+    F(LITLEO) \
+    F(SALANDIT) \
+    F(SIZZLIPEDE) \
+    F(CHARCADET) \
     F(GRIMER) \
     F(MUK) \
     F(KOFFING) \
@@ -1226,8 +1280,12 @@ enum NationalDexOrder
     F(BARBOACH) \
     F(WHISCASH) \
     F(CORPHISH) \
+    F(FLETCHLING) \
     F(CRAWDAUNT) \
     F(BALTOY) \
+    F(HIPPOPOTAS) \
+    F(SKORUPI) \
+    F(SANDILE) \
     F(CLAYDOL) \
     F(LILEEP) \
     F(CRADILY) \
@@ -1243,14 +1301,29 @@ enum NationalDexOrder
     F(STARMIE) \
     F(KECLEON) \
     F(SHUPPET) \
+    F(DRIFLOON) \
+    F(YAMASK) \
+    F(LITWICK) \
+    F(PHANTUMP) \
+    F(PUMPKABOO) \
+    F(MIMIKYU) \
+    F(SINISTEA) \
+    F(GREAVARD) \
     F(BANETTE) \
+    F(SIGILYPH) \
+    F(ARCHEN) \
+    F(MINIOR) \
+    F(BOMBIRDIER) \
     F(DUSKULL) \
     F(DUSCLOPS) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(DUSKNOIR)) \
     F(TROPIUS) \
+    F(NYMBLE) \
+    F(SMOLIV) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(CHINGLING)) \
     F(CHIMECHO) \
     F(ABSOL) \
+    F(APPLIN) \
     F(VULPIX) \
     F(NINETALES) \
     F(PICHU) \
@@ -1275,12 +1348,17 @@ enum NationalDexOrder
     F(GLALIE) \
     HOENN_DEX_IF(P_GEN_4_CROSS_EVOS, F(FROSLASS)) \
     F(SPHEAL) \
+    F(SNOVER) \
+    F(VANILLITE) \
+    F(CUBCHOO) \
     F(SEALEO) \
     F(WALREIN) \
     F(CLAMPERL) \
     F(HUNTAIL) \
     F(GOREBYSS) \
     F(RELICANTH) \
+    F(ALOMOMOLA) \
+    F(MAREANIE) \
     F(CORSOLA) \
     HOENN_DEX_IF(P_GALARIAN_FORMS, F(CURSOLA)) \
     F(CHINCHOU) \

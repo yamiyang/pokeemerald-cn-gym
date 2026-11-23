@@ -8,6 +8,13 @@
 | [teams_spec.json](teams_spec.json) | 八馆队伍结构化数据（`gen_party.py` 的输入） | ✅ |
 | [teams_e4.json](teams_e4.json) | 四天王 + 冠军队伍结构化数据 | ✅ |
 | [gen_party.py](gen_party.py) | 从 JSON 生成 `trainers.party` 片段的脚本 | ✅ |
+| [retint_wild.py](retint_wild.py) | 遇敌表生态改造脚本（`--seed` 无关，确定性） | ✅ |
+| [randomize_trainers.py](randomize_trainers.py) | NPC 队伍生成器（`--seed 42 --apply`） | ✅ |
+| [add_to_hoenn_dex.py](add_to_hoenn_dex.py) | 把新物种补进丰缘图鉴（按遇敌邻居定位） | ✅ |
+| [audit_encounters.py](audit_encounters.py) | 地形合理性审计（水域/沙漠/火山/冰室） | ✅ 0 违规 |
+| [verify_trainers.py](verify_trainers.py) | 批量校验进化与学招合法性 | ✅ 0 违规 |
+| [WILD.md](WILD.md) | 野外遇敌重制：生态混合 60/40、13 个生态池、地形硬约束审计 | ✅ 已进 ROM |
+| [RANDOM_TRAINERS.md](RANDOM_TRAINERS.md) | NPC 随机队伍算法：种类定主题、主题池随机、打击面兜底 | ✅ 已进 ROM（770 个训练师） |
 | [SAVE_COMPAT.md](SAVE_COMPAT.md) | 存档兼容性：改什么会坏档、改什么安全、当前余量实测 | 结论已确认 |
 | [ONLINE_LINK.md](ONLINE_LINK.md) | 联机对战调研：模拟器选型（mGBA 已证伪 / VBA-M 可用）、frp 公网中继、掌机三路线 | 隧道已本机验通，掌机环节待定 |
 
