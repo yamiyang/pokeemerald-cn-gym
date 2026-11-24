@@ -86,7 +86,17 @@ KEEP = {
     "TRAINER_NORMAN_1", "TRAINER_WINONA_1", "TRAINER_TATE_AND_LIZA_1", "TRAINER_JUAN_1",
     "TRAINER_SIDNEY", "TRAINER_PHOEBE", "TRAINER_GLACIA", "TRAINER_DRAKE", "TRAINER_WALLACE",
 }
-KEEP_CLASS = {"Leader", "Elite Four", "Champion", "Rival"}
+KEEP_CLASS = {"Leader", "Elite Four", "Champion"}
+
+# 这些 Rival 是手工设计的（冠军战、Wally 重赛、彩蛋战），不参与随机
+KEEP_PREFIX = ("TRAINER_STEVEN", "TRAINER_WALLY", "TRAINER_RED", "TRAINER_LEAF")
+
+# 剧情对手的「克制主题」：后缀是玩家选的御三家，对手用克制它的属性
+RIVAL_SUFFIX_THEME = {
+    "_MUDKIP": ["GRASS"],    # 玩家选水 -> 对手草
+    "_TREECKO": ["FIRE"],    # 玩家选草 -> 对手火
+    "_TORCHIC": ["WATER"],   # 玩家选火 -> 对手水
+}
 
 # 传说/幻兽/究极异兽不许出现在路人队里
 BANNED = re.compile(r"SPECIES_(TYRUNT|TYRANTRUM|AMAURA|AURORUS|ARCHEN|ARCHEOPS|TIRTOUGA|CARRACOSTA|"
@@ -131,7 +141,11 @@ def parse_species():
             if not ty:
                 continue
             refs = {"SPECIES_" + x for x in re.findall(r"SPECIES_(\w+)", body)}
+            legend = bool(re.search(
+                r"\.(isSubLegendary|isRestrictedLegendary|isMythical|isUltraBeast|isParadox)\s*=\s*TRUE",
+                body))
             sp[key] = {
+                "legend": legend,
                 "refs": refs,
                 "name": nm.group(1) if nm else "",
                 "types": [t.strip().replace("TYPE_", "") for t in ty.group(1).split(",") if t.strip()],
@@ -183,7 +197,8 @@ def main():
         if v.get("refs"):
             has_parent |= v["refs"] - {k}
     BASES = [k for k in SPEC if k not in has_parent and k.replace("SPECIES_", "") in LEARN
-             and not BANNED.search(k) and 200 <= SPEC[k]["stats"] <= 560]
+             and not BANNED.search(k) and not SPEC[k].get("legend")
+             and 200 <= SPEC[k]["stats"] <= 560]
 
     # 主题池
     pool_cache = {}
@@ -284,7 +299,8 @@ def main():
         levels = [int(x) for x in re.findall(r"^Level: (\d+)$", seg, re.M)]
         double = "Double Battle: Yes" in seg
 
-        skip = tname in KEEP or cls in KEEP_CLASS or not levels
+        skip = (tname in KEEP or cls in KEEP_CLASS or "_PLACEHOLDER" in tname
+                or tname.startswith(KEEP_PREFIX) or not levels)
         if skip:
             out.append(marker + seg)
             stats["kept"] += 1
@@ -293,6 +309,11 @@ def main():
         hi = max(levels)
         size = max(1, min(6, len(levels)))
         types = THEME.get(cls, [])
+        if cls == "Rival":
+            for suf, th in RIVAL_SUFFIX_THEME.items():
+                if tname.endswith(suf):
+                    types = th
+                    break
 
         if types:
             pool = pools_for(types)

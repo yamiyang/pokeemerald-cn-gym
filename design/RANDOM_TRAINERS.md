@@ -81,12 +81,82 @@ while len(team) < size and 还有未覆盖属性:
 
 只用 `learnset` 里 `等级 ≤ 当前等级` 的招。**TM 招不用**——这样不需要考虑徽章限制。
 
+## AI 强化（开关已打开）
+
+脚本：`design/upgrade_ai.py`　只改 `AI:` 一行，队伍/等级/招式不动，**存档零影响**（AI 标记不存盘，战斗开始时现查）。
+
+原版的问题不是「AI 笨」，是**大部分 NPC 根本没开 AI**：
+
+| 改造前 | 数量 |
+|---|---|
+| 只有 `Check Bad Move`（不自杀、不送，但不算伤害、不追残血、不换人） | 640 |
+| `Basic Trainer`（含全部馆主重赛、Wally、Steven） | 162 |
+| 手工调过的完整 AI | 13 |
+
+按最高等级分档，越往后越难缠：
+
+| 等级 | AI |
+|---|---|
+| < 20 | Check Bad Move / Try To Faint |
+| 20+ | + Check Viability（算招式价值、会用变化招） |
+| 31+ | + HP Aware（按血量决定先回血还是先打） |
+| 44+ | + Smart Switching（读你的队伍，换人针对） |
+
+改造后分布：`CB+TTF` 169 / `+CV` 259 / `+HP` 358 / `+SS` 66。
+
+**开关**（脚本顶部常量）：
+
+```python
+ENHANCE_AI = True        # 总开关，False 全部退回原版
+OMNISCIENT = False       # 电脑直接看你的招式/道具/特性（开挂级，慎开）
+ADD_VIABILITY_FROM = 20
+ADD_HP_AWARE_FROM = 31
+ADD_SMART_SWITCH_FROM = 44
+```
+
+```bash
+python design/upgrade_ai.py              # 看统计，不写
+python design/upgrade_ai.py --apply      # 生效（备份 .bak_ai）
+python design/upgrade_ai.py --apply --off  # 一键还原
+```
+
+> 手工设计的 13 队（8 馆 + 四天王 + 冠军）AI 保持原样，那是一队一队调过的。
+> `TRAINER_NONE` 与 `*_PLACEHOLDER` 占位空位不塞 AI。
+
 ## 保留不动的部分
 
-- **8 馆 + 四天王 + 冠军**（13 个手工设计）
-- **所有 `Leader` / `Elite Four` / `Champion` / `Rival`**（含馆主重赛版本、Wally、对手）
+- **8 馆 + 四天王 + 冠军**（13 个手工设计，队伍里已经混了新世代精灵）
+- **所有 `Leader` / `Elite Four` / `Champion`**（含馆主重赛版本 `_2`~`_5`）
+- **`TRAINER_STEVEN` / `TRAINER_WALLY_*` / `TRAINER_RED` / `TRAINER_LEAF`**（冠军战、Wally 重赛、彩蛋战，手工设计）
+- `_PLACEHOLDER` 占位条目
 
-其余 **770 个**训练师全部重生成。
+其余 **797 个**训练师全部重生成。
+
+## 剧情对手（Rival）也随机了
+
+之前 `Rival` 在 `KEEP_CLASS` 里，30 个对手版本（`TRAINER_MAY_*` / `TRAINER_BRENDAN_*`，3 个御三家 × 3 个地点 × 2 个性别）保留原版队伍——就是 **Treecko / Torchic / Mudkip**，新开档走到 103 号路第一战看到的就是这几只，所以「NPC 还是老精灵」的观感主要来自这里。
+
+现在对手参与随机，但保留**克制关系**：后缀是玩家选的御三家，对手挑克制它的属性。
+
+| 后缀 | 玩家选 | 对手主题 | 实例（103 号路） |
+|---|---|---|---|
+| `_MUDKIP` | 水 | 草 | Smoliv / Bulbasaur |
+| `_TREECKO` | 草 | 火 | Slugma / Larvesta |
+| `_TORCHIC` | 火 | 水 | Skrelp / Wailmer |
+
+改法：`KEEP_CLASS` 去掉 `Rival`，加 `KEEP_PREFIX` 白名单 + `RIVAL_SUFFIX_THEME` 主题表。
+
+## 传说漏网的修复
+
+原来 `BANNED` 是手写正则，**漏了三圣鸟、三圣兽、三湖神、拉帝欧斯/拉帝亚斯、雷吉三柱、克雷色利亚、三云神**等约 40 只。实测对手队伍里刷出过火焰鸟（MOLTRES）。
+
+现在改成读 `species_info` 的源码标记：
+
+```python
+legend = re.search(r"\.(isSubLegendary|isRestrictedLegendary|isMythical|isUltraBeast|isParadox)\s*=\s*TRUE", body)
+```
+
+`BASES` 构建时排除，不再依赖手写名单。全量复查：队伍里传说 0 只。
 
 ## 校验结果
 
@@ -97,17 +167,35 @@ while len(team) < size and 还有未覆盖属性:
 违规: 0
 ```
 
+全量复查：队伍内传说/幻兽/悖谬 0 只（含三圣鸟、三圣兽、拉帝欧斯等此前漏网的）。
+
 > 注意：校验时若把原版保留队伍也算进来，会看到 500 多处「招式超等级」。
 > 那是原版 NPC 用 TM 招（Wally 的七夕青鸟带燕返、沙奈朵带预知未来），
 > 不在升级学招表里，属于误报。只校验物种行是 `SPECIES_` 常量开头的队伍即可。
 
 ## 已知取舍
 
-1. **稀有精灵会偶尔出现**：花岩怪（Spiritomb）这类无进化链的稀有物种仍在池里。
-   想彻底排除需要在 `BANNED` 里补名字。
+1. **稀有精灵会偶尔出现**：花岩怪（Spiritomb）这类无进化链的稀有物种仍在池里
+   （它没被标记为传说，属于正常可捕捉物种）。
 2. **弱队仍可能出现**：壶壶（Shuckle）21 级只有 1 个攻击招，生成出来就是 1 招队。
    这是物种本身的学招表决定的，不是算法问题。
 3. **固定 seed**：每次 `--apply` 结果相同；换 seed 才会变。想要不同版本就改 seed 重跑。
+
+## 编译踩坑：`make` 只链接不重新生成
+
+改完 `trainers.party` 直接 `make`，可能只做一次链接就「编译成功」，新的 AI/队伍根本没进 ROM。
+原因：`Makefile` 用 `ifeq ($(OS),Windows_NT)` 决定 `EXE := .exe`，在 Git Bash 里 `make` 读不到这个变量，
+`EXE` 变空 → `tools/trainerproc/trainerproc` 这个前置文件不存在 → `%.h: %.party` 规则被跳过。
+
+```bash
+# 出错的样子
+make            # 只有 ld / objcopy，没有 trainerproc，ROM 其实没变
+# 正确做法：显式指定 EXE
+make EXE=.exe generated    # 重新生成 trainers.h（852 条 aiFlags）
+make EXE=.exe -j2          # 再编译，会看到 src/data.c 被重编
+```
+
+判断有没有真正生效：`stat src/data/trainers.h` 的时间戳应当是刚才，且 `grep -c aiFlags src/data/trainers.h` 等于训练师数。
 
 ## 回滚
 

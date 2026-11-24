@@ -23,7 +23,6 @@
 sound/**/*.bin
 sound/songs/midi/*.s
 tools/agbcc
-tools/compresSmol/
 *.map
 *.bat
 *.dump
@@ -67,3 +66,11 @@ tools/aif2pcm/aif2pcm
 python_tools/src/~$文本.xlsx
 __pycache__
 .map_version
+
+# 本地编译/调试产物
+build*.log
+push*.log
+_cpp_*.txt
+_t*.party
+src/data/trainers.party.bak*
+src/data/trainers.party.broken

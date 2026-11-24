@@ -345,6 +345,9 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 | 7–8 馆 | 上面 + `HP Aware` |
 | 四天王 / 冠军 | 上面 + `Smart Switching`（会换人针对你的队伍） |
 
+> 以上是 13 个手工队伍。全部 839 个训练师的分级强化（含馆主重赛、Wally、Steven）见
+> [RANDOM_TRAINERS.md](RANDOM_TRAINERS.md) 的「AI 强化」一节，脚本 `design/upgrade_ai.py`，开关已打开。
+
 ---
 
 ## 七、等你定的两件事
