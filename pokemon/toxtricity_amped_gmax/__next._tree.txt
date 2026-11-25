@@ -1,5 +1,5 @@
-:HL["/pokeemerald-cn-gym/_next/static/chunks/3uu5p6vv9yij8.css","style"]
+:HL["/pokeemerald-cn-gym/_next/static/chunks/18m7gpaagzlvx.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"id","t":"d","k":"toxtricity_amped_gmax","s":[]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"pokemon","h":96,"c":"$Q2"}]]
-0:{"b":"69crOYdbIV02nz6wImWgU","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"UmtL_WiACgG2zAILvtUmN","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
